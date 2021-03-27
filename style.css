@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.main{
+    display: flex;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    overflow-y: scroll;
+    transition: 0.3s;
+}
+.contentbar{
+   
+    /* background-image: linear-gradient( -45deg,  rgba(109,25,252,1) 16.4%, rgb(3, 233, 183) 45.1% ); */
+    width: 80%;
+    height: 100vh;
+    left: 20%;
+    top: 0;
+    position: absolute;
+}
+.main .contentbar .header{
+    width: 100%;
+    background-color:rgb(3, 233, 183);
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+    
+    
+}
+.main .contentbar .header .card{
+    /* background-color:#3facf4; */
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+    border-radius:3%;
+    overflow: hidden; 
+   
+}
+.main .contentbar .header .card .content p{
+    font-size: 16.8px;
+    
+}
+.main .contentbar .header .card .content label{
+    font-weight: bold;
+    float: left;
+    
+}
+.main .contentbar .header .card .content .right{
+    float: right;
+    
+}
+
+.main .contentbar .navbar .logo h1{
+border: 4px solid rgb(3, 233, 183);
+display: inline-block;
+color:rgb(3, 233, 183);
+padding: 5px;
+transition: 0.4s;
+
+}
+.main .contentbar .navbar .logo{
+    text-align:center;
+    padding: 10px;
+    margin-right: 20%;
+
+}
+.main .contentbar .navbar .logo h1:hover{
+    background-color: rgb(3, 233, 183);
+    color: white;
+    
+    
+
+}
+.main .contentbar .navbar{
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    
+}
+.main .sidebar .sidebar-logo{
+    border: 2px solid rgb(3, 233, 183);
+    text-align: center;
+    padding: 5px;
+    transition: 0.5s;
+    position: fixed;
+    width: inherit;
+    background-color: black;
+   
+   
+    
+}
+.main .sidebar .sidebar-logo:hover{
+    background-color:#03e9b7;
+}
+.main .sidebar .sidebar-logo h1{
+  color: rgb(3, 233, 183);
+}
+.main .sidebar .profile img{
+    border-radius: 50%;
+    width:70px;
+    height:70px;
+    border: 4px solid white;
+
+    
+}
+.main .sidebar .profile{
+    margin-top: 66px;
+    text-align: center;
+
+}
+.main .sidebar .line{
+    border: 1px solid gray;
+    margin: 0;
+    margin-top: 10px;
+    background: gray
+    
+
+}
+.main .sidebar .menu{
+    /* margin-top:5px; */
+
+}
+.main .sidebar .menu ul li{
+    border-bottom:1px solid gray;
+    padding:15px 0px 15px 10px;
+    /* text-align: center; */
+}
+.main .sidebar .menu ul li .up{
+    display: none;
+}
+.main .sidebar .menu ul li:hover > .down{
+    display: none;
+}
+.main .sidebar .menu ul li:hover > .up{
+    display: block;
+}
+
+.main .sidebar .menu ul li a{
+    margin-left: 10px;
+}
+.main .sidebar .menu ul li:hover{
+    background-color:#03e9b7;
+    padding-bottom: 15px;
+       
+}
+.main .sidebar .menu ul li:hover > ul{
+    margin-top: 15px;
+    display: block;
+    
+}
+.main .sidebar .menu ul li ul li:hover{
+    background-color: black;
+    width: 100%;
+    margin-right: 0;
+
+}
+.main .sidebar .menu ul li ul{
+    padding: 0;
+    margin: 0;
+}
+
+.main .sidebar .menu ul li:hover > ul li{
+border-left: 1px solid white;
+border-bottom: 1px solid white;
+border-top: 1px solid white;
+/* background: black; */
+}
+.main .sidebar .menu ul li ul{
+    display: none;
+}
+.checkbtn{
+   /* border: 1px solid red; */
+    /* z-index: 1; */
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 25px;
+    
+}
+.main #check{
+    display: none;
+}
+.checkbtn i{
+    color:#03e9b7;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.checkbtn .cross{
+    display: none;
+}
+
+#check:checked ~ .checkbtn{
+    z-index: 3;
+   
+    top: 10px;
+    left: 15px;
+    color: white;
+    display: block;
+    }
+
+#check:checked ~ .checkbtn .menu-toggel{
+    display: none;
+    }
+#check:checked ~ .sidebar{
+        display: block;
+        }
+
+
+        /* ADD STUDENT */
+.main .contentbar .add-student{
+    width: 100%;
+    border: 5px solid white;
+    background-color: black;
+
+   
+}
+.main .contentbar .add-student .head{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    
+    
+}
+.main .contentbar .add-student .form{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.main .contentbar .add-student .form form{
+display: flex;
+justify-content:space-between;
+margin-top: 10px;
+flex-wrap: wrap;
+font-family: sans-serif;
+/* border: 1px solid red; */
+
+}
+.main .contentbar .add-student .form form input{
+width: 100%;
+/* border: 1px solid red; */
+height: 30px;
+border-radius: 5%;
+outline: none;
+box-shadow: none;
+padding: 5px;
+background-color: black;
+margin: 5px 0 20px 0;
+/* width: 580px;
+height: 560px; */
+}
+#sbmt{
+    display: block;
+    background-color: #03e9b7;
+    font-weight: bold;
+    outline-style: none;
+    outline: none;
+    padding: 5px;
+    font-size: 20px;
+    border-radius:5px;
+    border: none;
+    height: 40px;
+    width: 100%;
+}
+.main .contentbar .add-student .form label{
+    font-weight:600;
+    /* border: 1px solid red; */
+
+}
+.main .contentbar .add-student .form .right-form{
+background-color: #2b2a2a;
+/* border: 1px solid red; */
+padding: 10px;
+width: 47.5%;
+}
+.main .contentbar .add-student .form .left-form{
+    background-color: #2b2a2a;
+    /* border: 1px solid red; */
+    padding: 10px;
+    width: 47.5%;
+    margin-left: 5%;
+}
+.main .contentbar .add-student .head i{
+    font-size: 40px;
+    margin-right: 10px;
+}
+/* table */
+table,th,td{
+    color: black;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table td{
+    padding: 8px;
+}
+.main .contentbar .finl-table table{
+    border: 1px solid black;
+    width: 100%;
+}
+.main .contentbar .finl-table{
+    width: 100%;
+    padding: 10px;
+}
+
+@media screen and (max-width:1311px){
+  
+    .main .contentbar .header{
+        flex-flow: wrap;
+    }
+    .main .contentbar .header .card{
+       margin-top: 10px;
+    
+}
+}
+@media screen and (max-width:991px){
+    .main .contentbar .header .card{
+        /* background-color:#3facf4; */
+        width: 200px;
+        height: 150px;
+      
+       
+    }
+  
+}
+@media screen and (max-width:854px){
+    .main .contentbar .header {
+        /* background-color:#3facf4; */
+        justify-content: space-around;
+      
+       
+    }
+  
+}
+@media screen and (max-width:990px){
+    .sidebar{
+        width: 30%;  
+    }
+    .contentbar{
+        /* background-image: linear-gradient( -45deg,  rgba(109,25,252,1) 16.4%, rgb(3, 233, 183) 45.1% ); */
+        width: 70%;
+        left: 30%;
+    }
+  
+}
+@media screen and (max-width:787px){
+    .sidebar{
+        width: 35%;  
+    }
+    .contentbar{
+        /* background-image: linear-gradient( -45deg,  rgba(109,25,252,1) 16.4%, rgb(3, 233, 183) 45.1% ); */
+        width: 65%;
+        left: 35%;
+    }
+  
+}
+@media screen and (max-width:748px){
+    .sidebar{
+        width: 75%; 
+        position: fixed;
+        display: none;
+        z-index: 2; 
+    }
+    .main .contentbar .navbar .logo{
+        text-align:center;
+        padding: 10px;
+        margin-right: 0;
+        margin-left: 20px;
+    
+    }
+    .main .sidebar .menu ul li{
+        
+        text-align: center;
+    }
+    .contentbar{
+        /* background-image: linear-gradient( -45deg,  rgba(109,25,252,1) 16.4%, rgb(3, 233, 183) 45.1% ); */
+        width: 100%;
+        left: 0;
+        z-index: -1;
+      
+    }
+    .checkbtn{
+        display: block;
+    }
+    .main .contentbar .header {
+        /* background-color:#3facf4; */
+        justify-content: space-between;
+      
+       
+    }
+    #check:checked ~ .checkbtn .cross{
+        display: block;
+        color: white;
+        
+        }
+  
+}
+@media screen and (max-width:639px){
+    .main .contentbar .header {
+        /* background-color:#3facf4; */
+        justify-content: space-around;
+      
+       
+    }
+}
+@media screen and (max-width:320px){
+    .checkbtn .cross{
+        font-size: 25px;   
+    }
+    .checkbtn{
+        left: 15px;
+        top:24px;
+    }
+    
+    
+}
+/* ADD STUDENT */
+@media screen and (max-width:990px){
+    .main .contentbar .add-student .form .left-form{
+        width: 100%;
+        margin-left: 0;
+    }
+    .main .contentbar .add-student .form .right-form{
+        width: 100%;
+    
+    }
+      
+     
+}
+@media screen and (max-width:320px){
+    .main .contentbar .add-student .head i{
+        font-size: 25px;
+        margin-right: 10px;
+        padding-top: 8px;
+    }
+    
+    
+}
